@@ -25,9 +25,11 @@ public class Emp_serv02 extends HttpServlet{
 		ArrayList<String> namelist=new ArrayList<String>();
 		Employee_entry emp=new Employee_entry();
 		emp.getAge(age,namelist);
+	   String s1="After Filtering Process...Employee Names";
+		out.print("<h1>"+s1+"</h1>");
 		
 		for(String s:namelist)
-			out.println(s);
+			out.println("<h3>"+s+"</h3>\n");
 		//RequestDispatcher dispatcher=req.getRequestDispatcher("/conform.jsp");
 		//dispatcher.forward(req, resp);
 		
